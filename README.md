@@ -11,9 +11,9 @@ pip install -r requirements.txt
 -
 
 go to config.json and open this file,
-you will see the parameters *text* and *window_count*,
+you will see the parameters *text*, *window_count* and *path_to_file*,
 the first is responsible for the window text,
-the second for the number of windows.
+the second for the number of windows, third is path to sound file.
 
 **Attention**
 

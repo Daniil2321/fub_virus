@@ -2,13 +2,19 @@ from json import load
 import sys
 import random
 from PyQt5.QtWidgets import QApplication, QMainWindow, QTextEdit
+import pygame
 
+# Initialize the pygame mixer
+pygame.mixer.init()
 
 with open("config.json", "r", encoding="utf-8") as config_file:
     config = load(config_file)
     windows_count = config.get("window_count")
     text = config.get("text")
+    path_to_sound = config.get("path_to_sound")
     print(config)
+
+pygame.mixer.music.load(path_to_sound)
 
 
 class RandomWindow(QMainWindow):
@@ -24,6 +30,7 @@ class RandomWindow(QMainWindow):
         self.setGeometry(random.randint(0, width), random.randint(0, height), 300, 200)
 
 def main(num_windows):
+    pygame.mixer.music.play()
     app = QApplication(sys.argv)  # Create a single QApplication instance
     screens = QApplication.screens()
     primary_screen = screens[0]
