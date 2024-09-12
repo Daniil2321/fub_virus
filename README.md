@@ -1,7 +1,7 @@
 **Step one**
 -
 
-Install the requirements
+Install the requirements.
 
 ```shell
 pip install -r requirements.txt
@@ -13,7 +13,7 @@ pip install -r requirements.txt
 go to config.json and open this file,
 you will see the parameters *text* and *window_count*,
 the first is responsible for the window text,
-the second for the number of windows
+the second for the number of windows.
 
 **Attention**
 
@@ -23,7 +23,14 @@ the windows will open indefinitely!
 **Step three**
 -
 
-Launch the program
+Launch the program.
+
+On windows:
+```shell
+python main.py
+```
+
+On Linux/MacOS
 ```shell
 python3 main.py
 ```
